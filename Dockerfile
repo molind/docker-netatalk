@@ -1,5 +1,5 @@
 FROM debian:jessie
-ENV NETATALK_VERSION 3.1.8
+ENV NETATALK_VERSION 3.1.10
 
 ENV DEPS="build-essential libevent-dev libssl-dev libgcrypt11-dev libkrb5-dev libpam0g-dev libwrap0-dev libdb-dev libtdb-dev libmysqlclient-dev libavahi-client-dev libacl1-dev libldap2-dev libcrack2-dev systemtap-sdt-dev libdbus-1-dev libdbus-glib-1-dev libglib2.0-dev libtracker-sparql-1.0-dev libtracker-miner-1.0-dev file"
 ENV DEBIAN_FRONTEND=noninteractive
@@ -12,8 +12,8 @@ RUN apt-get update \
         tracker \
         avahi-daemon \
         curl wget \
-        &&  wget      "http://ufpr.dl.sourceforge.net/project/netatalk/netatalk/3.1.8/netatalk-3.1.8.tar.gz" \
-        &&  curl -SL  "http://ufpr.dl.sourceforge.net/project/netatalk/netatalk/3.1.8/netatalk-3.1.8.tar.gz" | tar xvz
+        &&  wget      "http://ufpr.dl.sourceforge.net/project/netatalk/netatalk/3.1.10/netatalk-3.1.10.tar.gz" \
+        &&  curl -SL  "http://ufpr.dl.sourceforge.net/project/netatalk/netatalk/3.1.10/netatalk-3.1.10.tar.gz" | tar xvz
 
 WORKDIR netatalk-3.1.8
 
